@@ -111,10 +111,10 @@ class _App1State extends State<App1> {
                 UserAccountsDrawerHeader(
                   accountName: Text(
                     'kadf,k',
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(color: Colors.white),
                   ),
                   accountEmail:
-                      Text('a,fnazl,k', style: TextStyle(color: Colors.black)),
+                      Text('a,fnazl,k', style: TextStyle(color: Colors.white)),
                   currentAccountPicture: GestureDetector(
                     child: CircleAvatar(
                       backgroundColor: Color(0xFFFCFCFC),
@@ -145,7 +145,7 @@ class _App1State extends State<App1> {
                       title: Text('My account'),
                       leading: Icon(
                         FontAwesomeIcons.user,
-                        color: Colors.lightGreen[200],
+                        color: Colors.black,
                       )),
                 ),
                 InkWell(
@@ -156,7 +156,7 @@ class _App1State extends State<App1> {
                       title: Text('My orders'),
                       leading: Icon(
                         FontAwesomeIcons.basketShopping,
-                        color: Colors.lightBlue[200],
+                        color: Colors.black,
                       )),
                 ),
                 InkWell(
@@ -167,7 +167,7 @@ class _App1State extends State<App1> {
                       title: Text('My favorites'),
                       leading: Icon(
                         FontAwesomeIcons.heart,
-                        color: Colors.red[200],
+                        color: Colors.black,
                       )),
                 )
               ],

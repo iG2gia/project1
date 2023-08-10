@@ -33,7 +33,7 @@ class _FavoriteState extends State<Favorite> {
             },
           ),
           elevation: 0,
-          backgroundColor: Colors.lightGreen[50],
+          backgroundColor: Color(0xFFFCFCFC),
           centerTitle: true,
           title: Text(
             'Favorite',

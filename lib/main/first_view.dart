@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../women/product/women.dart';
 
 class First extends StatefulWidget {
   const First({Key? key}) : super(key: key);
@@ -62,7 +65,9 @@ class _FirstState extends State<First> {
                     fixedSize:
                         Size(400, 50), // Change the width and height as needed
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    //Get.to(Women());
+                  },
                   child: const Text(' Start Shopping ',
                       style: TextStyle(
                         color: Colors.white,
