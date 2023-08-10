@@ -8,6 +8,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../category/listview.dart';
 
+import '../../women/categories/vacation/vacation_page.dart';
 import 'products.dart';
 
 class Men extends StatefulWidget {
@@ -127,11 +128,11 @@ class _MenState extends State<Men> {
                 imagetitle: 'Work',
                 page: Work(),
               ),
-              /*Category(
-                    imagelocation: 'images/men/vacation/main.jpg',
-                    imagetitle: 'Vacation',
-                    page: Vaction(),
-                  ),*/
+              Category(
+                imagelocation: 'images/men/vacation/main.jpg',
+                imagetitle: 'Vacation',
+                page: Vaction(),
+              ),
               Category(
                 imagelocation: 'images/men/Accs/main.jpg',
                 imagetitle: 'Accessorie',

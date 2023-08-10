@@ -11,7 +11,7 @@ class VacationListMan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     for (int i = 0; i < productsMan.length; i++) {
-      if (productsMan[i].categorie == 'vacationman') {
+      if (productsMan[i].categorie == 'vacation') {
         vactionListman.add(productsMan[i]);
       }
     }

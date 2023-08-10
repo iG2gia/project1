@@ -11,7 +11,7 @@ class AccsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     for (int i = 0; i < productsMan.length; i++) {
-      if (productsMan[i].categorie == 'every day') {
+      if (productsMan[i].categorie == 'Accs') {
         accslist.add(productsMan[i]);
       }
     }

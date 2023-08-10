@@ -24,10 +24,7 @@ class _FavoriteState extends State<Favorite> {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: Icon(
-              FontAwesomeIcons.arrowLeft,
-              color: Colors.black,
-            ),
+            icon: Icon(FontAwesomeIcons.arrowLeft, color: Colors.black),
             onPressed: () {
               Get.back();
             },
