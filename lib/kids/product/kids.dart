@@ -27,144 +27,146 @@ class KidsState extends State<Kids> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: 30),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  isExpanded = !isExpanded;
-                  if (isExpanded == true) {
-                    formtext = 'Less';
-                    formicon = FontAwesomeIcons.angleUp;
-                  } else {
-                    formtext = 'More';
-                    formicon = FontAwesomeIcons.angleDown;
-                  }
-                });
-              },
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  side: BorderSide(
-                    color: Colors.black,
-                    width: 1.0,
-                  ),
-                ),
-                backgroundColor: const Color(0xFFFCFCFC),
-              ),
-              child: Container(
-                width: 100,
-                alignment: Alignment.centerLeft,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                      color: Colors.transparent), // Make the border invisible
-                ),
-                child: Row(
-                  children: [
-                    Icon(
-                      formicon,
+    return Material(
+      child: Column(
+        children: [
+          SizedBox(height: 30),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    isExpanded = !isExpanded;
+                    if (isExpanded == true) {
+                      formtext = 'Less';
+                      formicon = FontAwesomeIcons.angleUp;
+                    } else {
+                      formtext = 'More';
+                      formicon = FontAwesomeIcons.angleDown;
+                    }
+                  });
+                },
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(
                       color: Colors.black,
+                      width: 1.0,
                     ),
-                    SizedBox(width: 5),
-                    Text(
-                      formtext,
-                      style: TextStyle(
+                  ),
+                  backgroundColor: const Color(0xFFFCFCFC),
+                ),
+                child: Container(
+                  width: 100,
+                  alignment: Alignment.centerLeft,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.transparent), // Make the border invisible
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        formicon,
                         color: Colors.black,
                       ),
-                    ),
-                  ],
+                      SizedBox(width: 5),
+                      Text(
+                        formtext,
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ),
-          ],
-        ),
-        SizedBox(height: 5),
-        AnimatedContainer(
-          duration: Duration(milliseconds: 0),
-          height: isExpanded ? 200.0 : 0.0,
-          child: Container(
-            width: 400,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(80.0),
-              child: Image.asset('images/kids/o1.jpg'),
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 15),
-          child: Container(
-            width: double.infinity,
-            child: Text(
-              "Category :",
-              style: TextStyle(fontSize: 16),
-              textAlign: TextAlign.left,
-            ),
-          ),
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        Container(
-          height: 80.0,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: const [
-              Category(
-                imagelocation: 'images/kids/baby girl/a1.jpg',
-                imagetitle: '  Baby Girl\n' '    (0 - 3)',
-                page: BabyGirl(),
-              ),
-              Category(
-                imagelocation: 'images/kids/baby boy/a1.jpg',
-                imagetitle: '  Baby Boy \n' '    (0 - 3)',
-                page: BabyBoy(),
-              ),
-              Category(
-                imagelocation: 'images/kids/young girl/a1.jpg',
-                imagetitle: 'Young Girl \n' '    (4 - 7)',
-                page: YoungGirl(),
-              ),
-              Category(
-                imagelocation: 'images/kids/young boy/a1.jpg',
-                imagetitle: 'Young Boy \n' '    (4 - 7)',
-                page: YoungBoy(),
-              ),
-              Category(
-                imagelocation: 'images/kids/tween girl/a1.jpg',
-                imagetitle: 'Tween Girl \n' '    (8 - 12)',
-                page: TweenGirl(),
-              ),
-              Category(
-                imagelocation: 'images/kids/tween boy/a1.jpg',
-                imagetitle: 'Tween Boy \n' '    (8 - 12)',
-                page: TweenBoy(),
               ),
             ],
           ),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 15),
-          child: Container(
-            width: double.infinity,
-            child: Text(
-              "All :",
-              style: TextStyle(fontSize: 16),
-              textAlign: TextAlign.left,
+          SizedBox(height: 5),
+          AnimatedContainer(
+            duration: Duration(milliseconds: 0),
+            height: isExpanded ? 200.0 : 0.0,
+            child: Container(
+              width: 400,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(80.0),
+                child: Image.asset('images/kids/o1.jpg'),
+              ),
             ),
           ),
-        ),
-        SizedBox(
-          height: 2,
-        ),
-        ProductConstructor(productsList: productsKids),
-      ],
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: Container(
+              width: double.infinity,
+              child: Text(
+                "Category :",
+                style: TextStyle(fontSize: 16),
+                textAlign: TextAlign.left,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Container(
+            height: 80.0,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: const [
+                Category(
+                  imagelocation: 'images/kids/baby girl/a1.jpg',
+                  imagetitle: '  Baby Girl\n' '    (0 - 3)',
+                  page: BabyGirl(),
+                ),
+                Category(
+                  imagelocation: 'images/kids/baby boy/a1.jpg',
+                  imagetitle: '  Baby Boy \n' '    (0 - 3)',
+                  page: BabyBoy(),
+                ),
+                Category(
+                  imagelocation: 'images/kids/young girl/a1.jpg',
+                  imagetitle: 'Young Girl \n' '    (4 - 7)',
+                  page: YoungGirl(),
+                ),
+                Category(
+                  imagelocation: 'images/kids/young boy/a1.jpg',
+                  imagetitle: 'Young Boy \n' '    (4 - 7)',
+                  page: YoungBoy(),
+                ),
+                Category(
+                  imagelocation: 'images/kids/tween girl/a1.jpg',
+                  imagetitle: 'Tween Girl \n' '    (8 - 12)',
+                  page: TweenGirl(),
+                ),
+                Category(
+                  imagelocation: 'images/kids/tween boy/a1.jpg',
+                  imagetitle: 'Tween Boy \n' '    (8 - 12)',
+                  page: TweenBoy(),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: Container(
+              width: double.infinity,
+              child: Text(
+                "All :",
+                style: TextStyle(fontSize: 16),
+                textAlign: TextAlign.left,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 2,
+          ),
+          ProductConstructor(productsList: productsKids),
+        ],
+      ),
     );
   }
 }

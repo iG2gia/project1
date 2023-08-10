@@ -60,8 +60,7 @@ dev_dependencies:
 flutter:
 
     assets:
-      - images/
-      - images/men/sharpen_up/
+      - images/       
       - images/men/night out/
       - images/men/every day/
       - images/men/work/
@@ -80,6 +79,7 @@ flutter:
       - images/kids/tween girl/
       - images/kids/tween boy/
       - images/men/Accs/
+      - images/men/vacation/
     
       
 

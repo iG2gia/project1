@@ -50,7 +50,7 @@ List<Product> products = [
       "images/women/vacation/nb.png",
     ],
   ),
-  Product(
+  /* Product(
     id: 3,
     title: "Hang Top",
     price: 234.0,
@@ -58,13 +58,13 @@ List<Product> products = [
     description: "dummyText",
     image: "images/women/vacation/nh.png",
     color: Color(0xFF989493),
-    categorie: "jewrelry",
+    categorie: "vacation",
     imagesList: [
       "images/women/vacation/nh.png",
       "images/women/vacation/nh.png",
       "images/women/vacation/nh.png",
     ],
-  ),
+  ),*/
   Product(
     id: 5,
     title: "Office Code",

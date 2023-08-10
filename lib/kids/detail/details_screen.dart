@@ -1,3 +1,4 @@
+import 'package:app0/kids/product/kids.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -33,7 +34,7 @@ class DetailsScreenkids extends StatelessWidget {
           color: Colors.black,
         ),
         onPressed: () {
-          Get.back();
+          Get.to(Kids());
         },
       ),
       actions: [

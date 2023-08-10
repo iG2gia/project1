@@ -24,11 +24,4 @@ class CartController extends GetxController {
     cartProducts.add(product);
     update();
   }
-
-  /* void removeFromCart1() {
-    cartProducts.removeWhere(
-      (item) => item['name'] == name && item['price'] == price,
-    );
-    update();
-  }*/
 }

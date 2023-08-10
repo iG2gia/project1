@@ -1,6 +1,7 @@
 import 'package:app0/women/detail/details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import '../../women_products_list.dart';
 
 class VacationList extends StatelessWidget {

@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../../favorite/favorite.dart';
 
 import '../men_products_list.dart';
+import '../product/men.dart';
 import 'body.dart';
 
 class DetailsScreenman extends StatelessWidget {
@@ -33,7 +34,7 @@ class DetailsScreenman extends StatelessWidget {
           color: Colors.black,
         ),
         onPressed: () {
-          Get.back();
+          Get.to(Men());
         },
       ),
       actions: [

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // Importing FontAwesome icons
 import 'package:get/get.dart'; // Importing GetX library for state management
-import '../../Controllers/cart_productController.dart'; // Importing cart controller
+
 import '../../Controllers/product_price_controller.dart'; // Importing product price controller
 
 class CartCounter extends StatefulWidget {
@@ -10,8 +10,6 @@ class CartCounter extends StatefulWidget {
 }
 
 class _CartCounterState extends State<CartCounter> {
-  final cartController =
-      Get.find<CartController>(); // Initializing cart controller
   final productpricecontroller = Get.find<
       ProductPriceController>(); // Initializing product price controller
 

@@ -32,7 +32,7 @@ List<Product> productsMan = [
       "images/men/work/a1.png",
       "images/men/work/a1.png",
       "images/men/work/a1.png",
-    ], // Set the favorite value explicitly
+    ],
   ),
   Product(
     id: 2,
@@ -54,10 +54,10 @@ List<Product> productsMan = [
     title: "Hanazd",
     price: 234,
     size: 10,
-    description: "vacation",
+    description: "dummyText",
     image: "images/men/vacation/a1.png",
     color: Color(0xFF989493),
-    categorie: "ad",
+    categorie: "vacation",
     imagesList: [
       "images/men/vacation/a1.png",
       "images/men/vacation/a1.png",

@@ -1,3 +1,4 @@
+import 'package:app0/women/product/women.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // Importing FontAwesome icons
 import 'package:get/get.dart'; // Importing GetX library for navigation
@@ -34,7 +35,7 @@ class DetailsScreenwomen extends StatelessWidget {
           color: Colors.black, // Icon color
         ),
         onPressed: () {
-          Get.back(); // Navigate back
+          Get.to(Women()); // Navigate back
         },
       ),
       actions: [
