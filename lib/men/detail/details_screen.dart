@@ -1,3 +1,4 @@
+import 'package:app0/main/app1_state.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -34,7 +35,7 @@ class DetailsScreenman extends StatelessWidget {
           color: Colors.black,
         ),
         onPressed: () {
-          Get.to(Men());
+          Get.to(App1());
         },
       ),
       actions: [

@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // Importing Fo
 import 'package:get/get.dart'; // Importing GetX library for navigation
 
 import '../../favorite/favorite.dart'; // Importing favorite screen
+import '../../main/app1_state.dart';
 import '../women_products_list.dart'; // Importing product data
 import 'body.dart'; // Importing the body widget
 
@@ -35,7 +36,7 @@ class DetailsScreenwomen extends StatelessWidget {
           color: Colors.black, // Icon color
         ),
         onPressed: () {
-          Get.to(Women()); // Navigate back
+          Get.to(App1()); // Navigate back
         },
       ),
       actions: [

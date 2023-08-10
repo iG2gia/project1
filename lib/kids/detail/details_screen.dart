@@ -1,4 +1,5 @@
 import 'package:app0/kids/product/kids.dart';
+import 'package:app0/main/app1_state.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -34,7 +35,7 @@ class DetailsScreenkids extends StatelessWidget {
           color: Colors.black,
         ),
         onPressed: () {
-          Get.to(Kids());
+          Get.to(App1());
         },
       ),
       actions: [
