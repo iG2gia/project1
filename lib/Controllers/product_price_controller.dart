@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 class ProductPriceController extends GetxController {
-  var numOfItems = 1;
+  var numOfItems = 1.obs;
   var total = 0.0.obs;
 
   void incrementN() {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../women_products_list.dart'; // Importing product data
 
+/// widget that represent the diffrent colors of the product
 class ColorAndSize extends StatelessWidget {
   const ColorAndSize({
     Key? key,

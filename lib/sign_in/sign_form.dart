@@ -1,15 +1,16 @@
-import 'package:app0/sign_in/forgot_password.dart';
+import 'package:app0/sign_in/forgot_password.dart'; // Import necessary dependencies
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart'; // Import the Get package
 
+/// Widget represents the sign-in form
 class SignForm extends StatefulWidget {
   @override
   _SignFormState createState() => _SignFormState();
 }
 
 class _SignFormState extends State<SignForm> {
-  final _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>(); // Form key for validation
   String? email;
   String? password;
   bool remember = false;
@@ -18,7 +19,7 @@ class _SignFormState extends State<SignForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: _formKey,
+      key: _formKey, // Assign the form key
       child: Column(
         // Wrap the form fields and related widgets in a Column
         children: [
@@ -31,7 +32,6 @@ class _SignFormState extends State<SignForm> {
                   errors.add("Please enter your Email");
                 });
               }
-
               return null;
             },
             onChanged: (value) {
@@ -71,7 +71,6 @@ class _SignFormState extends State<SignForm> {
                   errors.add("Please enter your password");
                 });
               }
-
               return null;
             },
             onChanged: (value) {
@@ -105,7 +104,8 @@ class _SignFormState extends State<SignForm> {
           Column(
             children: List.generate(
               errors.length,
-              (index) => formErrorText(error: errors[index]),
+              (index) =>
+                  formErrorText(error: errors[index]), // Display form errors
             ),
           ),
           Row(
@@ -126,7 +126,9 @@ class _SignFormState extends State<SignForm> {
                   "Forgot Password",
                   style: TextStyle(decoration: TextDecoration.underline),
                 ),
-                onTap: () => {Get.to(ForgotPasswordScreen())},
+                onTap: () => {
+                  Get.to(ForgotPasswordScreen())
+                }, // Navigate to forgot password screen
               )
             ],
           ),
@@ -155,6 +157,7 @@ class _SignFormState extends State<SignForm> {
   }
 }
 
+// Function to display form errors
 Row formErrorText({required String error}) {
   return Row(
     children: [

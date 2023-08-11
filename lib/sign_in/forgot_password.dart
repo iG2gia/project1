@@ -1,27 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'no_account.dart';
+import 'package:get/get.dart';
 
+import 'no_account.dart'; // Import any necessary dependencies or custom widgets
+
+/// Widget represents the forgot password pade
 class ForgotPassForm extends StatefulWidget {
   @override
   _ForgotPassFormState createState() => _ForgotPassFormState();
 }
 
 class ForgotPasswordScreen extends StatelessWidget {
-  static String routeName = "/forgot_password";
+  static String routeName = "/forgot_password"; // Route name for navigation
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreen[50],
+      backgroundColor: Color(0xFFFCFCFC), // Set background color
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            FontAwesomeIcons.arrowLeft,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Get.back();
+          },
+        ),
         elevation: 0,
-        backgroundColor: Colors.lightGreen[50],
+        backgroundColor: Color(0xFFFCFCFC), // Set app bar background color
         centerTitle: true,
         title: Text(
           'forgot_password',
           style: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
         ),
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: IconThemeData(color: Colors.black), // Set app bar icon color
       ),
       body: SizedBox(
         width: double.infinity,
@@ -40,11 +53,11 @@ class ForgotPasswordScreen extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Please enter your email and we will send \nyou a link to return to your account",
+                  "Please enter your email and we will send you a link to return to your account",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 15),
-                ForgotPassForm(),
+                ForgotPassForm(), // Include the forgot password form
               ],
             ),
           ),
@@ -54,15 +67,16 @@ class ForgotPasswordScreen extends StatelessWidget {
   }
 }
 
+//class that virifie the errors and add it or remove from the forgot password field
 class _ForgotPassFormState extends State<ForgotPassForm> {
-  final _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>(); // Key to identify the form
   List<String> errors = [];
   String? email;
 
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: _formKey,
+      key: _formKey, // Assign the form key
       child: Column(
         children: [
           SizedBox(
@@ -125,13 +139,9 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
             ),
           ),
           SizedBox(height: 15),
-          NoAccountText(),
+          NoAccountText(), // Include the "NoAccountText" widget
         ],
       ),
     );
   }
 }
-
-// Define the custom widgets used in the code, like CustomSurffixIcon, FormError, DefaultButton, and getProportionateScreenHeight.
-// Make sure these widgets are defined elsewhere in your code or imported properly.
-// The above code assumes you have defined them somewhere in your project.

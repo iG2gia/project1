@@ -4,6 +4,7 @@ import 'package:get/get.dart'; // Importing GetX library for state management
 
 import '../../Controllers/product_price_controller.dart'; // Importing product price controller
 
+/// Display cart counter widget
 class CartCounter extends StatefulWidget {
   @override
   _CartCounterState createState() => _CartCounterState();

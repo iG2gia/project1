@@ -4,8 +4,8 @@ import 'package:get/get.dart'; // Importing GetX library for navigation
 import '../detail/details_screen.dart'; // Importing details screen for product
 import '../women_products_list.dart'; // Importing product data
 
-// A widget that constructs a grid of product items
-// ignore: must_be_immutable
+/// A widget that constructs a grid of product items
+
 class ProductConstructor extends StatelessWidget {
   List<dynamic> productsList;
   ProductConstructor({required this.productsList});
@@ -26,6 +26,7 @@ class ProductConstructor extends StatelessWidget {
           itemBuilder: (context, index) => ItemCard(
             product: productsList[index],
             press: () => Get.to(
+              // A widget that create detail screen when we click on the product
               DetailsScreenwomen(
                 product: productsList[index],
               ),
@@ -37,8 +38,8 @@ class ProductConstructor extends StatelessWidget {
   }
 }
 
-// A widget that represents an individual product item card
-// ignore: must_be_immutable
+/// A widget that represents an individual product item card
+
 class ItemCard extends StatelessWidget {
   Product product;
   final Function() press;

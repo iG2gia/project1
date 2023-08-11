@@ -71,7 +71,7 @@ class _CartpageState extends State<Cartpage> {
                               return Dismissible(
                                 key: UniqueKey(),
                                 onDismissed: (DismissDirection direction) {
-                                  cartController.removeItem(product);
+                                  cartController.removeFromCart(product);
                                   productpricecontroller
                                       .removefromCartCalculator(product);
                                 },

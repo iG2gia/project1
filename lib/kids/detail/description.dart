@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../kids_products_list.dart';
 
+/// a widget that represent description text in the detail screen
 class Description extends StatelessWidget {
   const Description({
     Key? key,
@@ -17,15 +18,15 @@ class Description extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            product.title,
+            product.title, // Displaying the product title
             style: Theme.of(context)
                 .textTheme
                 .headlineMedium!
                 .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           Text(
-            product.description,
-            style: TextStyle(height: 1.5),
+            product.description, // Displaying the product description
+            style: TextStyle(height: 1.5), // Setting line height
           ),
         ],
       ),

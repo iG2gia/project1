@@ -1,3 +1,4 @@
+// Import necessary packages and files
 import 'package:app0/kids/categories/baby%20boy/baby_boy.dart';
 import 'package:app0/kids/categories/baby%20girl/baby_girl.dart';
 import 'package:app0/kids/categories/tween%20boy/tween_boy.dart';
@@ -10,6 +11,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../category/listview.dart';
 import '../kids_products_list.dart';
 
+// A widget that represents the kids page
 class Kids extends StatefulWidget {
   const Kids({Key? key}) : super(key: key);
 
@@ -18,7 +20,6 @@ class Kids extends StatefulWidget {
 }
 
 class KidsState extends State<Kids> {
-  @override
   int activeIndex = 0;
 
   bool isExpanded = true;
@@ -47,6 +48,7 @@ class KidsState extends State<Kids> {
                     }
                   });
                 },
+                // Styling the ElevatedButton
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
@@ -84,6 +86,7 @@ class KidsState extends State<Kids> {
             ],
           ),
           SizedBox(height: 5),
+          // AnimatedContainer to change container height based on isExpanded
           AnimatedContainer(
             duration: Duration(milliseconds: 0),
             height: isExpanded ? 200.0 : 0.0,
@@ -100,7 +103,7 @@ class KidsState extends State<Kids> {
             child: Container(
               width: double.infinity,
               child: Text(
-                "Category :",
+                "Category :", // Heading for categories
                 style: TextStyle(fontSize: 16),
                 textAlign: TextAlign.left,
               ),
@@ -114,6 +117,7 @@ class KidsState extends State<Kids> {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: const [
+                // A widget that represents a category
                 Category(
                   imagelocation: 'images/kids/baby girl/a1.jpg',
                   imagetitle: '  Baby Girl\n' '    (0 - 3)',
@@ -155,7 +159,7 @@ class KidsState extends State<Kids> {
             child: Container(
               width: double.infinity,
               child: Text(
-                "All :",
+                "All :", // Heading for all products
                 style: TextStyle(fontSize: 16),
                 textAlign: TextAlign.left,
               ),
@@ -164,6 +168,7 @@ class KidsState extends State<Kids> {
           SizedBox(
             height: 2,
           ),
+          // Displaying a list of products using a custom widget
           ProductConstructor(productsList: productsKids),
         ],
       ),

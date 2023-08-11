@@ -10,13 +10,8 @@ class CartController extends GetxController {
 
   void removeFromCart(dynamic product) {
     cartProducts.remove(product);
-    productPriceController.numOfItems = 1;
+    productPriceController.numOfItems.value = 1;
 
-    update();
-  }
-
-  void removeItem(dynamic product) {
-    cartProducts.remove(product);
     update();
   }
 

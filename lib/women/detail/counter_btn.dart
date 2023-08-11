@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // Importing FontAwesome icons
 import 'package:get/get.dart'; // Importing GetX library for state management
-import '../../Controllers/MenController.dart'; // Importing your controller
+import '../../Controllers/favorite_controller.dart'; // Importing your controller
 import '../women_products_list.dart'; // Importing product data
 import 'cart_counter.dart'; // Importing cart counter widget
 

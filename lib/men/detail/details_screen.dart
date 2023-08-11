@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
+import '../../Controllers/first_view_controller.dart';
 import '../../favorite/favorite.dart';
 
 import '../men_products_list.dart';
@@ -11,7 +12,7 @@ import 'body.dart';
 
 class DetailsScreenman extends StatelessWidget {
   final Product product;
-
+  final PageController = Get.put(FirstViewController());
   DetailsScreenman({required this.product});
   @override
   Widget build(BuildContext context) {
@@ -35,6 +36,7 @@ class DetailsScreenman extends StatelessWidget {
           color: Colors.black,
         ),
         onPressed: () {
+          PageController.pageNum = 1;
           Get.to(App1());
         },
       ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // Importing FontAwesome icons
+import 'package:get/get.dart'; // Importing GetX library for state management
 
-import '../../Controllers/cart_productController.dart';
-import '../../Controllers/product_price_controller.dart';
+import '../../Controllers/product_price_controller.dart'; // Importing product price controller
+/// Display cart counter widget
 
 class CartCounter extends StatefulWidget {
   @override
@@ -11,9 +11,8 @@ class CartCounter extends StatefulWidget {
 }
 
 class _CartCounterState extends State<CartCounter> {
-  final CartController cartController = Get.find<CartController>();
-  final ProductPriceController productpricecontroller =
-      Get.find<ProductPriceController>();
+  final ProductPriceController productpricecontroller = Get.find<
+      ProductPriceController>(); // Initializing product price controller
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,8 @@ class _CartCounterState extends State<CartCounter> {
           buildOutlineButton(
             icon: FontAwesomeIcons.minus,
             press: () {
-              productpricecontroller.decrementN();
+              productpricecontroller
+                  .decrementN(); // Decrement the number of items
             },
           ),
           Padding(
@@ -37,7 +37,8 @@ class _CartCounterState extends State<CartCounter> {
           buildOutlineButton(
             icon: FontAwesomeIcons.plus,
             press: () {
-              productpricecontroller.incrementN();
+              productpricecontroller
+                  .incrementN(); // Increment the number of items
             },
           ),
         ],
@@ -45,6 +46,7 @@ class _CartCounterState extends State<CartCounter> {
     });
   }
 
+  // Building an outlined button with an icon
   SizedBox buildOutlineButton(
       {required IconData icon, required Function() press}) {
     return SizedBox(
@@ -57,7 +59,7 @@ class _CartCounterState extends State<CartCounter> {
               borderRadius: BorderRadius.circular(13),
             ),
           ),
-          onPressed: press,
+          onPressed: press, // Function to execute on button press
           child: Icon(icon)),
     );
   }

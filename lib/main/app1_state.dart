@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
+import '../Controllers/first_view_controller.dart';
 import '../cart/cart_page.dart';
 import '../favorite/favorite.dart';
 import '../men/product/men.dart';
@@ -19,11 +20,13 @@ class App1 extends StatefulWidget {
 }
 
 class _App1State extends State<App1> {
+  final PageController = Get.put(FirstViewController());
   @override
   Widget build(BuildContext context) {
     return Material(
       child: DefaultTabController(
         length: 4,
+        initialIndex: PageController.pageNum,
         child: SafeArea(
           child: Scaffold(
             appBar: PreferredSize(

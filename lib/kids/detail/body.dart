@@ -1,3 +1,4 @@
+// Import necessary packages and widgets
 import 'package:app0/kids/detail/add_to_cart.dart';
 import 'package:app0/kids/detail/color_and%20size.dart';
 import 'package:app0/kids/detail/counter_btn.dart';
@@ -5,16 +6,19 @@ import 'package:app0/kids/detail/description.dart';
 import 'package:app0/kids/detail/image.dart';
 import 'package:flutter/material.dart';
 
-import '../kids_products_list.dart';
+import '../kids_products_list.dart'; // Importing product data
 
+/// Widget that groups different parts of the detail screen
 class Body extends StatelessWidget {
-  final Product product1;
+  final Product product1; // Product data for the detail screen
 
   const Body({required this.product1});
+
   @override
   Widget build(BuildContext context) {
-    // It provide us total height and width
+    // Get the screen dimensions
     Size size = MediaQuery.of(context).size;
+
     return Column(
       children: <Widget>[
         SizedBox(
@@ -28,7 +32,6 @@ class Body extends StatelessWidget {
                   left: 20,
                   right: 20,
                 ),
-                //height: 500,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(

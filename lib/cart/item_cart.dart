@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import '../Controllers/product_price_controller.dart';
 
+/// widget that display cart products
 class ItemCard extends StatelessWidget {
   final product;
   final Function() press;
@@ -65,12 +66,13 @@ class ItemCard extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(vertical: 5),
                           child: Text(
                             product.title,
-                            style: TextStyle(color: Colors.black, fontSize: 16),
+                            style: const TextStyle(
+                                color: Colors.black, fontSize: 16),
                           ),
                         ),
                         Text(
                           "\$${product.price}",
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                             fontSize: 16,
@@ -95,7 +97,7 @@ class ItemCard extends StatelessWidget {
                             productpricecontroller.numOfItems
                                 .toString()
                                 .padLeft(2, "0"),
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                         ),
                         buildOutlineButton(
@@ -117,6 +119,7 @@ class ItemCard extends StatelessWidget {
     });
   }
 
+// button builder
   SizedBox buildOutlineButton({
     required IconData icon,
     required Function() press,

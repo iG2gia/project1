@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../women_products_list.dart'; // Importing product data
 
+/// a widget that represent description text in the detail screen
 class Description extends StatelessWidget {
   const Description({
     Key? key,

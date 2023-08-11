@@ -6,6 +6,7 @@ import 'package:get/get.dart'; // Importing GetX library for state management
 import 'package:icons_flutter/icons_flutter.dart'; // Importing icons
 import '../women_products_list.dart'; // Importing product data
 
+/// widget make us add the product to the cart
 class AddToCart extends StatelessWidget {
   AddToCart({
     required this.product,

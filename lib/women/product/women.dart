@@ -10,6 +10,8 @@ import '../categories/every day/every_day_page.dart';
 import '../categories/vacation/vacation_page.dart';
 import '../women_products_list.dart';
 
+/// A widget that represents the women page
+
 class Women extends StatefulWidget {
   const Women({Key? key}) : super(key: key);
 
@@ -87,6 +89,7 @@ class _WomenState extends State<Women> {
           ],
         ),
         SizedBox(height: 5),
+        // we used the AnimatedContainer to change the container height with changement of isExpanded
         AnimatedContainer(
           duration: Duration(milliseconds: 0),
           height: isExpanded ? 200.0 : 0.0,
@@ -117,6 +120,7 @@ class _WomenState extends State<Women> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: const [
+              //a widget that make us represent a category
               Category(
                 imagelocation:
                     'images/women/vacation/a1.png', // Image location for category
@@ -167,9 +171,8 @@ class _WomenState extends State<Women> {
         SizedBox(
           height: 2,
         ),
-        ProductConstructor(
-            productsList:
-                products), // Displaying a list of products using a custom widget
+        // Displaying a list of products using a custom widget
+        ProductConstructor(productsList: products),
       ],
     );
   }

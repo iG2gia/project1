@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 
 import '../women_products_list.dart'; // Importing product data
 
+/// a widget that regroupe the diffrent parts of the detail screen
 class Body extends StatelessWidget {
   final Product product1;
 

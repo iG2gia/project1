@@ -1,9 +1,9 @@
-import 'package:app0/kids/product/kids.dart';
 import 'package:app0/main/app1_state.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
+import '../../Controllers/first_view_controller.dart';
 import '../../favorite/favorite.dart';
 
 import '../kids_products_list.dart';
@@ -11,6 +11,7 @@ import 'body.dart';
 
 class DetailsScreenkids extends StatelessWidget {
   final Product product;
+  final PageController = Get.put(FirstViewController());
 
   DetailsScreenkids({required this.product});
   @override
@@ -35,6 +36,7 @@ class DetailsScreenkids extends StatelessWidget {
           color: Colors.black,
         ),
         onPressed: () {
+          PageController.pageNum = 3;
           Get.to(App1());
         },
       ),

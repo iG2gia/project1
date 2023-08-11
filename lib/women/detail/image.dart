@@ -4,6 +4,8 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart'; // Importing 
 
 import '../women_products_list.dart'; // Importing product data
 
+/// A widget that constructs a CarouselSlider which represent the different product images
+
 class ProductTitleWithImage extends StatefulWidget {
   ProductTitleWithImage({
     Key? key,

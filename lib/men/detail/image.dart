@@ -4,6 +4,8 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../men_products_list.dart';
 
+/// A widget that constructs a CarouselSlider which represent the different product images
+
 class ProductTitleWithImage extends StatefulWidget {
   ProductTitleWithImage({
     Key? key,
@@ -26,12 +28,13 @@ class _ProductTitleWithImageState extends State<ProductTitleWithImage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          //slider builder
           CarouselSlider.builder(
             options: CarouselOptions(
               height: 300,
               enlargeCenterPage: true,
-              onPageChanged: (index, reason) =>
-                  setState(() => activeIndex = index),
+              onPageChanged: (index, reason) => setState(() =>
+                  activeIndex = index), //Update activeIndex when page changes
               autoPlayAnimationDuration: const Duration(seconds: 2),
             ),
             itemCount: widget.product.imagesList.length,
@@ -43,7 +46,7 @@ class _ProductTitleWithImageState extends State<ProductTitleWithImage> {
           SizedBox(
             height: 40,
           ),
-          buildIndicator(),
+          buildIndicator(), // Display the indicator dots
         ],
       ),
     );
@@ -53,15 +56,15 @@ class _ProductTitleWithImageState extends State<ProductTitleWithImage> {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
       color: Colors.transparent,
-      child: Image.asset(imageUrl),
+      child: Image.asset(imageUrl), // Display the product image
     );
   }
 
   Widget buildIndicator() => AnimatedSmoothIndicator(
-        activeIndex: activeIndex,
-        count: widget.product.imagesList.length,
+        activeIndex: activeIndex, // Current active index
+        count: widget.product.imagesList.length, // Total number of images
         effect: JumpingDotEffect(
-          activeDotColor: Colors.lightBlue,
+          activeDotColor: Colors.lightBlue, // Color of the active dot
         ),
       );
 }

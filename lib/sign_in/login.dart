@@ -1,12 +1,13 @@
-import 'package:app0/sign_in/sign_form.dart';
+import 'package:app0/sign_in/sign_form.dart'; // Import necessary dependencies
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart'; // Import the Get package
 
 import '../sign_up/SocalCard.dart';
-import 'no_account.dart';
-// Corrected the import name
 
+import 'no_account.dart'; // Import any necessary custom widgets
+
+/// Widget that represents the sign-in page
 class SignIn extends StatefulWidget {
   SignIn({Key? key}) : super(key: key);
 
@@ -15,7 +16,7 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-  final _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>(); // Form key for validation
   bool remember = false;
   late String password;
   late String email;
@@ -32,7 +33,7 @@ class _SignInState extends State<SignIn> {
             color: Colors.black,
           ),
           onPressed: () {
-            Get.back();
+            Get.back(); // Use Get to navigate back
           },
         ),
         elevation: 0,
@@ -67,13 +68,13 @@ class _SignInState extends State<SignIn> {
                       ),
                       SizedBox(height: 5),
                       Text(
-                        "Sign in with your email and password  \nor continue with social media",
+                        "Sign in with your email and password\nor continue with social media",
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(
                         height: 50,
                       ),
-                      SignForm(),
+                      SignForm(), // Include the sign-in form
                       SizedBox(
                         height: 80,
                       ),
@@ -104,7 +105,7 @@ class _SignInState extends State<SignIn> {
                         ],
                       ),
                       SizedBox(height: 40),
-                      NoAccountText(),
+                      NoAccountText(), // Include the "NoAccountText" widget
                       SizedBox(height: 70),
                     ],
                   ),

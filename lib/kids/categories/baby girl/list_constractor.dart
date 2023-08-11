@@ -1,25 +1,27 @@
-import 'package:app0/kids/detail/details_screen.dart';
-import 'package:app0/kids/kids_products_list.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:app0/kids/detail/details_screen.dart'; // Importing the details screen
+import 'package:app0/kids/kids_products_list.dart'; // Importing the list of kids' products
+import 'package:flutter/material.dart'; // Importing Flutter's material library
+import 'package:get/get.dart'; // Importing the GetX library
 
+/// A widget that constructs a list of baby girl category products for kids
 class BabyGirlList extends StatelessWidget {
-  final babygirllist = [];
+  final List babyGirlList = []; // Creating an empty list for baby girl products
 
   BabyGirlList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // Iterate through the kids' product list and add products that belong to the 'baby girl' category
     for (int i = 0; i < productsKids.length; i++) {
       if (productsKids[i].categorie == 'baby girl') {
-        babygirllist.add(productsKids[i]);
+        babyGirlList.add(productsKids[i]);
       }
     }
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: GridView.builder(
-        itemCount: babygirllist.length,
+        itemCount: babyGirlList.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           mainAxisSpacing: 20,
@@ -27,11 +29,13 @@ class BabyGirlList extends StatelessWidget {
           childAspectRatio: 0.75,
         ),
         itemBuilder: (context, index) {
+          // Constructing an 'ItemCard' for each product in the 'babyGirlList'
           return ItemCard(
-            product: babygirllist[index],
+            product: babyGirlList[index],
             press: () => Get.to(
               DetailsScreenkids(
-                product: babygirllist[index],
+                product: babyGirlList[
+                    index], // Passing product details to the details screen
               ),
             ),
           );
@@ -41,6 +45,7 @@ class BabyGirlList extends StatelessWidget {
   }
 }
 
+/// A widget that represents a card displaying product details
 class ItemCard extends StatelessWidget {
   final Product product;
   final Function() press;
@@ -51,8 +56,9 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Building the UI for the product card
     return GestureDetector(
-      onTap: press,
+      onTap: press, // Triggering the 'press' function when the card is tapped
       child: Container(
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
@@ -60,7 +66,8 @@ class ItemCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.2), // Shadow color
+              color:
+                  Colors.black.withOpacity(0.2), // Adding a shadow to the card
               spreadRadius: 2,
               blurRadius: 5,
               offset: Offset(0, 3), // Offset in the y-direction
@@ -72,8 +79,10 @@ class ItemCard extends StatelessWidget {
             Expanded(
               flex: 3,
               child: Hero(
-                tag: "${product.id}",
-                child: Image.asset(product.image),
+                tag:
+                    "${product.id}", // Adding a Hero animation with a unique tag
+                child:
+                    Image.asset(product.image), // Displaying the product image
               ),
             ),
             Column(
@@ -81,15 +90,12 @@ class ItemCard extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 5),
                   child: Text(
-                    // products is out demo list
-
-                    product.title,
-
+                    product.title, // Displaying the product title
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
                 Text(
-                  "\$${product.price}",
+                  "\$${product.price}", // Displaying the product price
                   style: TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.green),
                 ),

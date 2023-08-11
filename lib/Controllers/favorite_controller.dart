@@ -13,10 +13,6 @@ class FavoriteController extends GetxController {
     update();
   }
 
-  bool Isfavorite(dynamic product) {
-    return favoriteProducts.contains(product);
-  }
-
   void favoriteadder(dynamic product) {
     if (favoriteProducts.contains(product)) {
       favoriteProducts.remove(product);

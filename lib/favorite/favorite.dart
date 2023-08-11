@@ -1,3 +1,5 @@
+// ignore_for_file: dead_code
+
 import 'package:app0/kids/detail/details_screen.dart';
 import 'package:app0/men/detail/details_screen.dart';
 import 'package:app0/men/men_products_list.dart';
@@ -7,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
-import '../Controllers/MenController.dart';
+import '../Controllers/favorite_controller.dart';
 import '../kids/kids_products_list.dart';
 
 class Favorite extends StatefulWidget {
@@ -84,7 +86,6 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<FavoriteController>();
     bool isFavorite = true;
 
     return GetBuilder<FavoriteController>(builder: (controller) {

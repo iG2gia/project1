@@ -1,3 +1,4 @@
+// Import necessary packages and files
 import 'package:app0/men/categories/accs/accs.dart';
 import 'package:app0/men/categories/every%20day/every_day.dart';
 import 'package:app0/men/categories/night%20out/night_out.dart';
@@ -5,12 +6,11 @@ import 'package:app0/men/categories/work/work.dart';
 import 'package:app0/men/men_products_list.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../category/listview.dart';
-
 import '../../women/categories/vacation/vacation_page.dart';
 import 'products.dart';
 
+// A widget that represents the men page
 class Men extends StatefulWidget {
   const Men({Key? key}) : super(key: key);
 
@@ -34,10 +34,12 @@ class _MenState extends State<Men> {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              // ElevatedButton that toggles the isExpanded value
               ElevatedButton(
                 onPressed: () {
                   setState(() {
                     isExpanded = !isExpanded;
+                    // Changing the text and icon based on isExpanded value
                     if (isExpanded == true) {
                       formtext = 'Less';
                       formicon = FontAwesomeIcons.angleUp;
@@ -47,6 +49,7 @@ class _MenState extends State<Men> {
                     }
                   });
                 },
+                // Styling the ElevatedButton
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
@@ -84,6 +87,7 @@ class _MenState extends State<Men> {
             ],
           ),
           SizedBox(height: 5),
+          // AnimatedContainer to change container height based on isExpanded
           AnimatedContainer(
             duration: Duration(milliseconds: 0),
             height: isExpanded ? 200.0 : 0.0,
@@ -100,7 +104,7 @@ class _MenState extends State<Men> {
             child: Container(
               width: double.infinity,
               child: Text(
-                "Category :",
+                "Category :", // Heading for categories
                 style: TextStyle(fontSize: 16),
                 textAlign: TextAlign.left,
               ),
@@ -114,6 +118,7 @@ class _MenState extends State<Men> {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: const [
+                // A widget that represents a category
                 Category(
                   imagelocation: 'images/men/night out/main.jpg',
                   imagetitle: 'Night Out',
@@ -136,7 +141,7 @@ class _MenState extends State<Men> {
                 ),
                 Category(
                   imagelocation: 'images/men/Accs/main.jpg',
-                  imagetitle: 'Accessorie',
+                  imagetitle: 'Accessory',
                   page: Accs(),
                 ),
               ],
@@ -150,7 +155,7 @@ class _MenState extends State<Men> {
             child: Container(
               width: double.infinity,
               child: Text(
-                "All :",
+                "All :", // Heading for all products
                 style: TextStyle(fontSize: 16),
                 textAlign: TextAlign.left,
               ),
@@ -159,6 +164,7 @@ class _MenState extends State<Men> {
           SizedBox(
             height: 2,
           ),
+          // Displaying a list of products using a custom widget
           ProductConstructor(productsList: productsMan),
         ],
       ),

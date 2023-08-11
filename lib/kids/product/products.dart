@@ -1,9 +1,10 @@
-import 'package:app0/kids/detail/details_screen.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:app0/kids/detail/details_screen.dart'; // Importing the details screen for kids' products
+import 'package:flutter/material.dart'; // Importing Flutter's material library for UI components
+import 'package:get/get.dart'; // Importing GetX library for navigation
 
-import '../kids_products_list.dart';
+import '../kids_products_list.dart'; // Importing the list of kids' products
 
+// A widget representing the product constructor for kids' products
 // ignore: must_be_immutable
 class ProductConstructor extends StatelessWidget {
   List<dynamic> productsList;
@@ -11,6 +12,7 @@ class ProductConstructor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Building the grid view of kids' products
     return Expanded(
         child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -30,6 +32,7 @@ class ProductConstructor extends StatelessWidget {
   }
 }
 
+// A widget representing an individual item card for kids' products
 // ignore: must_be_immutable
 class ItemCard extends StatelessWidget {
   Product product;
@@ -43,7 +46,7 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: press,
+      onTap: press, // Trigger the specified function when tapped
       child: Container(
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
@@ -63,8 +66,8 @@ class ItemCard extends StatelessWidget {
             Expanded(
               flex: 3,
               child: Hero(
-                tag: "${product.id}",
-                child: Image.asset(product.image),
+                tag: "${product.id}", // Unique tag for hero animation
+                child: Image.asset(product.image), // Display product image
               ),
             ),
             Column(
@@ -72,17 +75,16 @@ class ItemCard extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 5),
                   child: Text(
-                    // products is out demo list
-
-                    product.title,
-
+                    product.title, // Display product title
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
                 Text(
-                  "\$${product.price}",
+                  "\$${product.price}", // Display product price
                   style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.green),
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                  ),
                 ),
               ],
             ),

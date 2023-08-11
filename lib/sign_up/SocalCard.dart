@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+/// Widget constructs the SocialCard
 class SocialCard extends StatelessWidget {
-  final IconData icon; // Use IconData instead of FontAwesomeIcons
-  final Color backgroundColor;
-  final VoidCallback onPressed;
-  final Color iconColor;
+  final IconData icon; // Icon data for the icon
+  final Color backgroundColor; // Background color of the circular container
+  final VoidCallback onPressed; // Callback function when the card is pressed
+  final Color iconColor; // Color of the icon
 
   SocialCard({
     required this.iconColor,
@@ -16,7 +17,7 @@ class SocialCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onPressed,
+      onTap: onPressed, // Calls the provided onPressed function when tapped
       child: Container(
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
@@ -24,9 +25,9 @@ class SocialCard extends StatelessWidget {
           shape: BoxShape.circle,
         ),
         child: Icon(
-          icon,
-          size: 30,
-          color: iconColor,
+          icon, // The icon to be displayed
+          size: 30, // Icon size
+          color: iconColor, // Icon color
         ),
       ),
     );

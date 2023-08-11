@@ -1,17 +1,19 @@
-import 'package:app0/women/product/women.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // Importing FontAwesome icons
 import 'package:get/get.dart'; // Importing GetX library for navigation
 
+import '../../Controllers/first_view_controller.dart';
 import '../../favorite/favorite.dart'; // Importing favorite screen
 import '../../main/app1_state.dart';
 import '../women_products_list.dart'; // Importing product data
 import 'body.dart'; // Importing the body widget
 
+/// A widget that create detail screen for each product
 class DetailsScreenwomen extends StatelessWidget {
   final Product product;
 
   DetailsScreenwomen({required this.product});
+  final PageController = Get.put(FirstViewController());
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +21,15 @@ class DetailsScreenwomen extends StatelessWidget {
       // Setting the background color
       backgroundColor: Color(0xFFF0F0F0),
       appBar: buildAppBar(context), // Building the app bar
-      body: Body(
+
+      body: //widget that regroupe the different parts of detail page
+          Body(
         product1: product, // Passing the product data to the body widget
       ),
     );
   }
 
-  // Building the app bar
+  // Building the appbar of the detail screen
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Color(0xFFF0F0F0), // App bar background color
@@ -36,6 +40,7 @@ class DetailsScreenwomen extends StatelessWidget {
           color: Colors.black, // Icon color
         ),
         onPressed: () {
+          PageController.pageNum = 2;
           Get.to(App1()); // Navigate back
         },
       ),

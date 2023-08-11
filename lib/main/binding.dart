@@ -2,7 +2,7 @@ import 'package:app0/Controllers/cart_productController.dart';
 import 'package:app0/Controllers/product_price_controller.dart';
 import 'package:get/get.dart';
 
-import '../Controllers/MenController.dart';
+import '../Controllers/favorite_controller.dart';
 
 class AppBindings extends Bindings {
   @override

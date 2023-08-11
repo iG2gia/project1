@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+/// class to repesent no account text
+
 class NoAccountText extends StatelessWidget {
   const NoAccountText({
     Key? key,

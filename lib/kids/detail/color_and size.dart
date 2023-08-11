@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../kids_products_list.dart';
+import '../kids_products_list.dart'; // Importing product data
+/// widget that represent the diffrent colors of the product
 
 class ColorAndSize extends StatelessWidget {
   const ColorAndSize({
@@ -21,7 +22,7 @@ class ColorAndSize extends StatelessWidget {
               RichText(
                 text: TextSpan(
                   children: [
-                    TextSpan(text: "Price\n"),
+                    TextSpan(text: "Price\n"), // Displaying the product price
                     TextSpan(
                       text: "\$${product.price}",
                       style: Theme.of(context)
@@ -33,12 +34,12 @@ class ColorAndSize extends StatelessWidget {
                   ],
                 ),
               ),
-              Text("Color"),
+              Text("Color"), // Displaying the color title
               Row(
                 children: <Widget>[
                   ColorDot(
                     color: Color(0xFF356C95),
-                    isSelected: true,
+                    isSelected: true, // Whether the color is selected or not
                   ),
                   ColorDot(color: Color(0xFFF8C078)),
                   ColorDot(color: Color(0xFFA29B9B)),
